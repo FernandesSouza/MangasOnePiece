@@ -14,5 +14,7 @@ namespace OnePiece.Infraestrutura.Data
 
         public DbSet<MangasModel> manga { get; set; }
         public DbSet<AdministradorModel> administradores { get; set; }
+        public DbSet<UsuarioModel> usuario { get; set; }
+        public DbSet<ComentarioModel> comentario { get; set; }
     }
 }

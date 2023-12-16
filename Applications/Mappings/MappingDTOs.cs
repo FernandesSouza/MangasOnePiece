@@ -11,8 +11,9 @@ namespace OnePiece.Applications.Mappings
         public MappingDTOs()
         {
 
-            CreateMap<MangasModel, MangaDto>();                
-
+            CreateMap<MangasModel, MangaDto>().ReverseMap();
+            CreateMap<UsuarioModel, UsuarioDTO>().ReverseMap();
+            CreateMap<ComentarioModel, ComentarioDTO>().ReverseMap();   
         }
 
 

@@ -6,7 +6,7 @@ namespace OnePiece.Infraestrutura.Interfaces
     {
 
         Task<MangasModel> PesquisarManga(string capitulo);
-            
+        Task<UsuarioModel> RegisterNewUser(UsuarioModel usuario);   
        
 
     }

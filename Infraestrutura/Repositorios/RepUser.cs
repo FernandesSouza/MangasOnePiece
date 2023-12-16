@@ -21,5 +21,14 @@ namespace OnePiece.Infraestrutura.Repositorios
             
 
         }
+
+        public async Task<UsuarioModel> RegisterNewUser(UsuarioModel usuario)
+        {
+            await _context.usuario.AddAsync(usuario);
+            await _context.SaveChangesAsync();
+
+            return usuario;
+            
+        }
     }
 }

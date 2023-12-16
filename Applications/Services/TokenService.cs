@@ -43,5 +43,35 @@ namespace OnePiece.Applications.Services
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
+
+        public string GerarTokenUsuario(UsuarioModel usuario)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim("id",usuario.id.ToString()),
+                new Claim("username",usuario.nome),
+                new Claim(JwtRegisteredClaimNames.Email, usuario.email),
+                new Claim(JwtRegisteredClaimNames.Sub, usuario.senha!),
+               // new Claim(ClaimTypes.Role, "UserMod")
+
+            };
+
+            var credencials = new SigningCredentials(_chave, SecurityAlgorithms.HmacSha256);
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.UtcNow.AddHours(1),
+
+                SigningCredentials = credencials,
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
+
+
+        }
     }
 }

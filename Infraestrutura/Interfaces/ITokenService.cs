@@ -7,5 +7,7 @@ namespace OnePiece.Infraestrutura.Interfaces
 
         string GerarToken(AdministradorModel administrador);
 
+        string GerarTokenUsuario(UsuarioModel usuario);
+
     }
 }

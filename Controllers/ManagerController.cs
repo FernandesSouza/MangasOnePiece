@@ -40,7 +40,6 @@ namespace OnePiece.Controllers
         [Authorize(Roles = "Administrador")]
         public async Task<ActionResult<MangasModel>> PublicarCapitulos([FromForm] MangasModel model, List<IFormFile> files)
         {
-
             if (files == null || files.Count == 0)
             {
                 return BadRequest("Nenhuma imagem enviada");

@@ -28,7 +28,7 @@ builder.Services.AddAutoMapper(typeof(MappingDTOs));
 builder.Services.AddScoped<IAdmin, RepAdmin>();
 builder.Services.AddScoped<IUser, RepUser>();
 builder.Services.AddScoped<ITokenService, TokenService>();
-
+builder.Services.AddScoped<IChatRepositorie, ChatRepositorie>();
 builder.Services.AddDbContext<BancoContext>(options =>
 options.UseNpgsql("Host=babar.db.elephantsql.com;Database=gmenofkl;Username=gmenofkl;Password=VXUg6X-xzw7v3Lj8Ybpo2oNe3ZzSwOK6;"));
 

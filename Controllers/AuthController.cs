@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using OnePiece.Domain.Models;
 using OnePiece.Infraestrutura.Data;
 using OnePiece.Infraestrutura.Interfaces;
+using OnePiece.Infraestrutura.Repositorios;
 
 namespace OnePiece.Controllers
 {
@@ -44,5 +45,36 @@ namespace OnePiece.Controllers
             }
 
         }
+
+
+        [HttpPost]
+        public async Task<ActionResult<dynamic>> AutenticarUsuario(UserLogin user)
+        {
+            try
+            {
+                var usuario = await _context.usuario.SingleOrDefaultAsync(query => query.email.ToLower() == user.email && query.senha.ToLower() == user.senha);
+                if(usuario == null)
+                {
+                    return Unauthorized("FAÇA O CADASTRO, CASO NÃO TENHA");
+                } else
+                {
+                    var token =  _token.GerarTokenUsuario(usuario);
+                    return Ok(new {Token = token});
+
+                }
+            }
+            catch(Exception ex)
+            {
+
+                return BadRequest("ERRO INTERNO" + ex);
+
+
+            }
+
+
+
+
+        }
+
     }
 }
