@@ -51,11 +51,9 @@ namespace OnePiece.Controllers
                     using (var memoryStream = new MemoryStream())
                     {
                         await file.CopyToAsync(memoryStream);
-
                         model.imagens?.Add(memoryStream.ToArray());
                     }
                 }
-
                 var newManga = await _admin.PublicarManga(model);
                 var newMangaDto = _mapper.Map<MangaDto>(newManga);
                 return CreatedAtAction(nameof(PublicarCapitulos), new { id = newMangaDto.iddocumento }, newMangaDto);

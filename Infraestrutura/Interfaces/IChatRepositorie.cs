@@ -6,6 +6,5 @@ namespace OnePiece.Infraestrutura.Interfaces
     {
         Task PostarComentario(ComentarioModel comentario);
         Task<IEnumerable<ComentarioModel>> Feed();
-
     }
 }

@@ -17,7 +17,8 @@ namespace OnePiece.Infraestrutura.Repositorios
         public Task<MangasModel> PesquisarManga(string capitulo)
         {
             var manga = _context.manga.SingleOrDefaultAsync(c => c.capitulo == capitulo);
-            return manga!;
+            return manga;
+            
             
 
         }

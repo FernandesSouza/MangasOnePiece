@@ -4,10 +4,7 @@ namespace OnePiece.Infraestrutura.Interfaces
 {
     public interface ITokenService
     {
-
         string GerarToken(AdministradorModel administrador);
-
         string GerarTokenUsuario(UsuarioModel usuario);
-
     }
 }

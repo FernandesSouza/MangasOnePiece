@@ -7,14 +7,12 @@ namespace OnePiece.Infraestrutura.Repositorios
 {
     public class RepAdmin : IAdmin
     {
-
         private readonly BancoContext _context;
 
         public RepAdmin(BancoContext context)
         {
             _context = context;
         }
-
         public async Task<MangasModel> EditarMangas(MangasModel model)
         {
 
@@ -23,13 +21,11 @@ namespace OnePiece.Infraestrutura.Repositorios
             return model;
 
         }
-
         public Task<MangasModel> PesquisarManga(string capitulo)
         {
             var manga = _context.manga.FirstOrDefaultAsync(m => m.capitulo == capitulo);
             return manga!;
         }
-
         public async Task<MangasModel> PublicarManga(MangasModel manga)
         {
             await _context.manga.AddAsync(manga);
@@ -37,8 +33,6 @@ namespace OnePiece.Infraestrutura.Repositorios
 
             return manga;
         }
-
-
         public async Task Remover(string capitulo)
         {
             var remove = await _context.manga.SingleOrDefaultAsync(c => c.capitulo == capitulo);
@@ -49,7 +43,5 @@ namespace OnePiece.Infraestrutura.Repositorios
                 await _context.SaveChangesAsync();
             }
         }
-
-
     }
 }

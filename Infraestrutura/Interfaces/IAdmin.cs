@@ -9,6 +9,5 @@ namespace OnePiece.Infraestrutura.Interfaces
         Task<MangasModel> EditarMangas(MangasModel model);
         Task Remover(string capitulo);
         Task<MangasModel> PesquisarManga(string capitulo);
-
     }
 }

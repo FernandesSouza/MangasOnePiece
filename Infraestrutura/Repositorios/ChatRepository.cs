@@ -6,11 +6,11 @@ using OnePiece.Infraestrutura.Interfaces;
 
 namespace OnePiece.Infraestrutura.Repositorios
 {
-    public class ChatRepositorie : IChatRepositorie
+    public class ChatRepository : IChatRepositorie
     {
         private readonly BancoContext _context;
 
-        public ChatRepositorie(BancoContext context)
+        public ChatRepository(BancoContext context)
         {
             _context = context;
         }

@@ -14,6 +14,11 @@ namespace OnePiece.Domain.Models
             this.ismoderador = ismoderador;
         }
 
+        public UsuarioModel()
+        {
+            
+        }
+
         [Key]
         public int id { get; set; }
 

@@ -22,9 +22,6 @@ namespace OnePiece.Controllers
         [HttpGet("usuario/{capitulo}")]
         public async Task<IActionResult> GetByCapitulo(string capitulo)
         {
-
-           
-
             var manga = await _user.PesquisarManga(capitulo);
             var mangaDTO = _mapper.Map<MangaDto>(manga);
 
@@ -56,7 +53,6 @@ namespace OnePiece.Controllers
         public async Task<ActionResult<UsuarioDTO>> RegisterNewUser(UsuarioDTO usuarioDTO)
         {
 
-          
            if (usuarioDTO == null)
             {
                 return BadRequest();
