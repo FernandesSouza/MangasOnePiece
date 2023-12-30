@@ -9,6 +9,10 @@ O site possui um acesso de administrador para realizar operações CRUD completa
 [Atualização] --> Testes Unitários com xUnit
 
 Autenticação JWT
+
+
 Biblioteca de validação -> Fluent Validation
+
+
 Biblioteca para auxílio do mapeamento das entidades -> AutoMapper
 
