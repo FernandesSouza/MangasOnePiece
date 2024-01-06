@@ -6,7 +6,13 @@ Eles também podem se registrar para interagir com outros leitores e participar 
 
 O site possui um acesso de administrador para realizar operações CRUD completas nos mangás, facilitando a postagem de novos conteúdos e modificações.
 
+[Atualização] --> Testes Unitários com xUnit
+
 Autenticação JWT
+
+
 Biblioteca de validação -> Fluent Validation
+
+
 Biblioteca para auxílio do mapeamento das entidades -> AutoMapper
 
