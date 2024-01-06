@@ -31,6 +31,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IChatRepositorie, ChatRepository>();
 builder.Services.AddDbContext<BancoContext>(options =>
 options.UseNpgsql("Host=babar.db.elephantsql.com;Database=gmenofkl;Username=gmenofkl;Password=VXUg6X-xzw7v3Lj8Ybpo2oNe3ZzSwOK6;"));
+builder.Services.AddCors();
 
 builder.Services.AddSwaggerGen(c =>
 {
@@ -95,13 +96,11 @@ builder.Services.AddAuthorization(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     app.UseSwaggerUI();
-}
 
-app.UseHttpsRedirection();
+
 
 app.UseAuthentication();
 
