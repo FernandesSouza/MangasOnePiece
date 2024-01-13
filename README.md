@@ -49,7 +49,7 @@ Este comando executa um contêiner Docker chamado onepiece-app em modo destacado
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  Acessar a Aplicação
  
-Abra seu navegador da web e acesse http://localhost:8080.
+Abra seu navegador da web e acesse http://localhost:8080/swagger/index.html.
 
 Você deverá ver a aplicação OnePiece em execução.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
