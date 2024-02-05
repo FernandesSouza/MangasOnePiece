@@ -1,6 +1,8 @@
 # MangasOnePiece
 
 Backend de um site de leitura de mangás de One Piece
+
+
 Os usuários podem acessar e ler qualquer mangá já lançado sem a necessidade de login.
 Eles também podem se registrar para interagir com outros leitores e participar de debates.
 
@@ -65,5 +67,6 @@ Para remover o contêiner após interrompê-lo, use o seguinte comando:
 docker rm onepiece-app
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Removendo a Imagem
-Se desejar remover a imagem Docker, use o seguinte comando:
+
+
 docker rmi onepiece-app
